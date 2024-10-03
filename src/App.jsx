@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import SearchBar from './components/SearchBar'
+import Titulo from './components/Titulo'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <SearchBar></SearchBar>
+      <Titulo></Titulo>
     </>
   )
 }
