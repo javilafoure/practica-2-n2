@@ -26,7 +26,7 @@ export default function Buttons() {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [nomPage])
 
 
 
