@@ -1,13 +1,19 @@
-import { useState } from 'react'
 import Titulo from './components/Titulo'
+import SearchBar from './components/SearchBar'
+import Buttons from './components/Buttons'
+import Card from './components/Card'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Titulo></Titulo>
+      
+        <Titulo />
+        <SearchBar />
+        <Buttons />
+        
+      
     </>
   )
 }

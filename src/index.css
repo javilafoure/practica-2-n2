@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button{
+    @apply w-32 border shadow-md rounded-md py-2 text-white bg-[#051c33];
+}
