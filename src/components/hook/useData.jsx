@@ -14,6 +14,7 @@ function useData() {
 
         fetchData(url)
             .then(data => setResult(data.photos.photo))
+
     }
 
     useEffect(() => {
@@ -22,10 +23,12 @@ function useData() {
 
     const actPage = (e) => {
         setNomPage(e.target.value)
+        console.log(e.target.value)
+
     }
 
   return {
-    nomPage, result, actPage
+    nomPage, result, actPage, getData, setNomPage
 
   }
     
