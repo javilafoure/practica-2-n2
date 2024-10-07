@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import Card from './Card'
-import { fetchData } from './fetchData'
+import useData from './hook/useData'
+
 
 export default function Buttons() {
 
-    const [nomPage, setNomPage] = useState('car')
-    const [result, setResult] = useState([])
-
-    const actPage = (e) => {
-        setNomPage(e.target.value)
-    }
-
-    function getData() {
-        const key = 'ebc61b0f5d47d9382ea85cb7012c153c'
-        const url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${key}&tags=${nomPage}&per_page=24&format=json&nojsoncallback=1`
-
-        fetchData(url)
-            .then(data => setResult(data.photos.photo))
-    }
-
-    useEffect(() => {
-        getData()
-    }, [nomPage])
-
-
+    const {result, nomPage, actPage} = useData()
 
     return (
         <div className='flex flex-col content-center align-center justify-center gap-7'>
