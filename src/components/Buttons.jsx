@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
-
-async function fetchData(url) {
-    const data = await fetch(url)
-    const json = await data.json()
-    return json
-}
+import { fetchData } from './fetchData'
 
 export default function Buttons() {
 
